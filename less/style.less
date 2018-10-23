@@ -1,0 +1,190 @@
+@import (reference) 'lesshat.less';
+@import (reference) 'remixins.less';
+
+@bg-body   : #fafafa;
+@bg-header : #303746;
+ 
+@color-base  : #353537;
+@color-name  : #e0e0e0;
+@color-title : #6b919f;
+ 
+@font-body  : 'Open Sans', Arial, sans-serif;
+@font-name  : 'Cantata One', Georgia, Times, serif;
+
+*, *:before, *:after {
+	.box-sizing(border-box);
+}
+
+html {
+	font-size: 65.5%;
+}
+
+figure {
+	margin: 0; /* Overwrites the normalize.css default margin */
+}
+
+.clearfix {
+	*zoom: 1;
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+body {
+	.font-size(16px);
+	background-color: @bg-body;
+	color: @color-base;
+	font-family: @font-body;
+	font-weight: 300;
+}
+
+/* Header styles */
+.portfolio-header {
+    .padding(50px, 0);
+    background-color: @bg-header;
+    text-align: center;
+    .profile-avatar img {
+        .size(80px);
+        border-radius: 50%;
+    }
+    .profile-name {
+        .font-size(24px);
+        .margin-bottom(10px);
+        color: @color-name;
+        font-family: @font-name;
+        font-weight: 400;
+    }
+    .profile-fields {
+        .max-width(320px);
+        .font-size(14px);
+        color: lighten(@bg-header, 50%);
+        margin-left: auto;
+        margin-right: auto;
+        .field-list {
+            padding: 0;
+        }
+        .field-item {
+            display: inline-block;
+            &:after {
+                content:' ,';
+            }
+            &:last-child:after {
+                content:'';
+            }
+        }
+    }
+    .profile-location {
+        .font-size(14px);
+        color: lighten(@bg-header, 30%);
+        &:before {
+            .margin-right(10px);
+            .font-size(18px);
+        }
+    }
+}
+
+/* Portfolio Section Styles */
+.portfolio-area {
+    .margin(50px, auto);
+    .max-width(960px);
+    width: 100%;
+    .portfolio-list {
+        padding-left: 0;
+    }
+    .portfolio-item {
+        .margin-bottom(30px);
+        .height(320px);
+        .padding(0, 15px);
+        float: left;
+        list-style-type: none;
+        width: 33,33333333333333%;
+    }
+    .portfolio-content {
+        text-align: center;
+    }
+    .portfolio-cover {
+        width: 100%;
+    }
+    .portfolio-image {
+        border: 8px solid #fff;
+        max-width: 100%;
+    }
+    .portfolio-title {
+        .font-size(14px);
+        color: darken(@color-title, 10%);
+        text-transform: capitalize;
+        vertical-align: middle;
+        width: 100%;
+    }
+    .portfolio-fields {
+        .font-size(12px);
+        color: darken(@bg-body, 30%);
+        .field-list {
+            padding: 0;
+        }
+        .field-item {
+            display: inline-block;
+            &:after {
+                content:' ,';
+            }
+            &:last-child:after {
+                content:'';
+            }
+        }
+    }
+}
+
+/* Footer Styles */
+.portfolio-footer {
+    .margin(30px, auto);
+    .max-width(960px);
+    text-align: center;
+    width: 100%;
+    .power-by {
+        .font-size(12px);
+        color: darken(@bg-body, 30%);
+        text-transform: uppercase;
+    }
+    .power-logo {
+        .width(36px);
+        .height(36px);
+        color: #1769ff;
+        display: inline-block;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        text-decoration: none;
+        text-indent: 100%;
+        white-space: nowrap;
+        &:before {
+            .line-height(38px);
+            .font-size(36px);
+            display: inline-block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            text-indent: 0;
+            top: 0;
+            width: 100%;
+        }
+    }
+}
+
+
+/* Mediqueries to make the web responsive */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .portfolio-area .portfolio-item {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .portfolio-area .portfolio-item {
+        height: auto;
+        width: 100%;
+    }
+}
