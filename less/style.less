@@ -108,7 +108,11 @@ body {
         text-align: center;
     }
     .portfolio-cover {
-        width: 100%;
+        cursor: pointer;
+	    cursor: -webkit-zoom-in;
+	    cursor: -moz-zoom-in;
+	    cursor: zoom-in;
+	    width: 100%;
     }
     .portfolio-image {
         border: 8px solid #fff;
@@ -187,4 +191,55 @@ body {
         height: auto;
         width: 100%;
     }
+}
+
+/* Keyframkes */
+.keyframes(~'fadeInRight, 0% { transform: translateX(20px); opacity: 0; } 100% { transform: translateX(0); opacity: 1; }');
+.keyframes(~'fadeInLeft, 0% { transform: translateX(-20px); opacity: 0; } 100% { transform: translateX(0); opacity: 1; }');
+ 
+.keyframes(~'fadeOutRight, 0% { transform: translateX(0); opacity: 1; } 100% { transform: translateX(20px); opacity: 0; }');
+.keyframes(~'fadeOutLeft, 0% { transform: translateX(0); opacity: 1; } 100% { transform: translateX(-20px); opacity: 0; }');
+ 
+.keyframes(~'fadeInDown, 0% { transform: translateY(-20px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; }');
+.keyframes(~'fadeOutDown, 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(20px); opacity: 0; }');
+
+/* Overlay background animation */
+.mfp-bg.animated {
+    opacity: 0;
+    .transition(opacity 350ms ease-out);
+}
+.mfp-bg.mfp-ready.animated {
+    opacity: 0.8;
+}
+.mfp-bg.mfp-removing.animated {
+    opacity: 0;
+}
+
+/* Lightbox content animation */
+.mfp-wrap.animated .mfp-content {
+    .animation-duration(350ms);
+}
+.mfp-wrap.animated .mfp-content {
+    .animation-name(fadeInDown);
+}
+.mfp-wrap.mfp-removing.animated .mfp-content {
+    .animation-name(fadeOutDown);
+}
+
+
+/* Lightbox arrows animation */
+.mfp-wrap.animated .mfp-arrow {
+    .animation-duration(350ms);
+}
+.mfp-wrap.animated .mfp-arrow-left {
+    .animation-name(fadeInRight);
+}
+.mfp-wrap.mfp-removing.animated .mfp-arrow-left {
+    .animation-name(fadeOutLeft);
+}
+.mfp-wrap.animated .mfp-arrow-right {
+    .animation-name(fadeInLeft);
+}
+.mfp-wrap.mfp-removing.animated .mfp-arrow-right {
+    .animation-name(fadeOutRight);
 }
