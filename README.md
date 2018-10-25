@@ -16,4 +16,4 @@ Today I wanted to try the behance API to recover some of my projects posted on t
  - Behande API projects endpoint
 
  ## Project Screenshot
-![Screenshot](http:// "Project Screenshot")
+![Screenshot](https://github.com/GamertodArk/custom-behance-portfolio/blob/master/project-screenshots/Screenshot_2018-10-24%20Behance%20API%20Test.png "Project Screenshot")
