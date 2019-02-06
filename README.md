@@ -1,6 +1,6 @@
 # Custom Behance Portfolio
 
-Today I wanted to try the behance API to recover some of my projects posted on there. I want to update my webpage and I'll use what I'd learned in this project in the nre version of my webpage
+This is a custom Behance portfolio, it can show images, thumbnails, and some characteristics of the projects associated with the chosen account. It makes use of the Behance API to retrieve all the information needed for this portfolio to work.
 
 ## In this project I used
 
